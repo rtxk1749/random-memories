@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Our Memories ♡</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      background: #fff2f5;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      text-align: center;
+      padding: 25px;
+    }
+
+    h1 {
+      color: #d85c7a;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    #photo {
+      display: block;
+      margin: auto;
+
+      max-width: 90vw;
+      max-height: 72vh;
+
+      border-radius: 18px;
+
+      box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    p {
+      color: #c75b76;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>A little memory for you ♡</h1>
+
+    <img id="photo" alt="Our memory">
+
+    <p>Scan again for another memory ♡</p>
+
+  </div>
+
+
+  <script>
+
+    const photos = [
+
+      "1ArYuFVSzbxUwxIrTnfqg93O9BBwcO_3s",
+      "1uhAdJM17l4NYyVlCnTXwiQRRWEy1lMie",
+      "10Ht5ULSU3R4ITtoANJtkZjT_fsVF3Hau",
+      "1oxgYmYlA09wbZYqrtM9T8xkomRZjV44F",
+      "1TnSelRzlDOy4uoZtiQ3tNDrzaAfSXuXP",
+      "18NU48a2NRH-TI9q8W7cYdGFmTxbrKLw7",
+      "19JJd907PS1LJNe5BC5OdOZodwrOWYwGr",
+      "13qfZbHC5vYud-rKruSG6BHYqGogwFcIZ",
+      "15FgctGcZ8qfoZCNx7IcbTnY2olY9lEbd",
+      "17CT9lxLBo1XDudLhplsCtH8vM-h4i3Ro",
+      "1_oQyMQK4OqgCmInAPsSMuGL9y86Xw7pF",
+      "1TLqJs4Ca-iplag2bOso2eeZAVq3_KfTc",
+      "1ZPVM0P-JwaPcef6k6O1zL418YFeopAXs",
+      "1R3_gGx-xMrFiAmzHYHsKI6PcDV_h_ZZx",
+      "1RLJHu4FYViiaxDkY_lFEwju8IWt82mu9",
+      "1_5RdFMxyi112jN9Mya8JhB5cHk0EqV0n",
+      "1HNj62hxhtV9_Uz6jPFEUmmL-pawDQvdE",
+      "1fYNjkjeep6-ouq4-ns8oWz7upjqgTtSI",
+      "19RsZKGU-xYR7CvJvLxHKUOcP4RwjN7lb",
+      "19cuQHRHeCNh4wXBzdfTJAO3bVz4ttfV8",
+      "16xN1cyh8Ma4-RDVeF6maSWEF5KmWBuRK",
+      "1cQ_mjbHrRxr7QCe4Cd2589yusv7lcb9a",
+      "1lPXIdq45cvjJz69LEGhtM_he-Bnn5nxX",
+      "12tFQcGgNN7Nv-yCEG4viO1r866m3_GWr",
+      "1PKZMELbiMexf6zfCtNuBRPD11gaLWsri",
+      "1Bt53JB1aREv7YJcqnLp9ZEnxM6UCwJbG"
+
+    ];
+
+
+    // Pick a random photo
+    const randomIndex =
+      Math.floor(Math.random() * photos.length);
+
+    const selectedPhoto =
+      photos[randomIndex];
+
+
+    // Load photo from Google Drive
+    document.getElementById("photo").src =
+      `https://drive.google.com/thumbnail?id=${selectedPhoto}&sz=w1600`;
+
+  </script>
+
+</body>
+</html>
